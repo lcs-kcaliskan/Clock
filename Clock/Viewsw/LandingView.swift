@@ -9,15 +9,29 @@ import SwiftUI
 
 struct LandingView: View {
     var body: some View {
-        VStack {
+        TabView(selection: Binding.constant(1)) {
             
-            Image(systemName: "battery.100percent")
-            Image(systemName: "clock.badge.fill")
-
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            WorldClockView()
+                .tabItem {
+                    Image(systemName: "globe")
+                    Text("World Clock")
+                }
+                .tag(1)
+            
+            AlarmsView()
+                .tabItem {
+                    Image(systemName: "alarm.fill")
+                    Text("Alarm")
+                }
+                .tag(2)
+            
+            StopWatchView()
+                .tabItem {
+                    Image(systemName: "stopwatch.fill")
+                    Text("Stopwatch")
+                }
+                .tag(3)
+            
         }
         .padding()
     }
