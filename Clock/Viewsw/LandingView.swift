@@ -33,7 +33,8 @@ struct LandingView: View {
                 .tag(3)
             
         }
-        .padding()
+        .preferredColorScheme(.dark)
+        .tint(.orange)
     }
 }
 
