@@ -9,10 +9,13 @@ import SwiftUI
 
 struct WorldClockView: View {
     var body: some View {
-        Text("WorldClock")
+        NavigationStack {
+            Text("WorldClock")
+                .navigationTitle("World Clock")
+        }
     }
 }
-
+    
 #Preview {
-    WorldClockView()
+    LandingView()
 }
