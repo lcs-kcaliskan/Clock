@@ -7,9 +7,13 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct LandingView: View {
     var body: some View {
         VStack {
+            
+            Image(systemName: "battery.100percent")
+            Image(systemName: "clock.badge.fill")
+
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
@@ -20,5 +24,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    LandingView()
 }
